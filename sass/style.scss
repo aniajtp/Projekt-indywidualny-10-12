@@ -4,65 +4,164 @@
 @import "sidebar";
 
 
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
-.container {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.container-fluid {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.row {
+body { font-family: sans serif; margin:0;}
+
+.flexbox {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(228, 225, 225);
 }
-.col {
-	padding: 0 5px;
-	margin-bottom: 10px;
-	float: left;
+.grid-container {
+  display: grid;
+  min-width: calc(100vw - 10px);
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 30px 1fr 550px;
+  grid-template-areas:
+  "sidebar header"
+  "sidebar content"
+  "sidebar links";
 }
-.col-1 {width: 8.334%}
-.col-2 {width: 16.667%}
-.col-3 {width: 25%}
-.col-4 {width: 33.334%}
-.col-5 {width: 41.667%}
-.col-6 {width: 50%}
-.col-7 {width: 58.334%}
-.col-8 {width: 66.667%}
-.col-9 {width: 75%}
-.col-10 {width: 83.334%}
-.col-11 {width: 91.667%}
-.col-12 {width: 100%}
-
-
-
-
-@media (max-width: 468px) {
-	.col {
-		float: none;
-		width: 100%;
-	}	
+.item {
+  margin: 0;
 }
-@media(max-width: 767px) {
-  @include grid('sm');
+.header {
+  grid-area: header;
+  background: #fff;
+}
+.sidebar {
+  grid-area: sidebar;
+  background:#000;
+}
+.content {
+  grid-area: content;
+}
+.links {
+  grid-area: links;
+  background: #fff;
+}
+.itemc content {
+  background: rgb(228, 225, 225);
+  margin: 2px;
+  border: 2px solid black;
+}
+header h1 {
+  display: flex;
+  font-size:25px;
+  color: #fff;
+  padding-left: 30px; 
+  font-family: 'Kalam', cursive;
+}
+  h1 a{
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+}
+header nav ul li{
+  display: block;
+  list-style-type: none;;
+}
+header nav ul li a {
+  display: block;
+  font-size: 15px;
+  color: #fff;
+  margin: 5px;
+  text-decoration: none;
+}
+header nav li a:hover{
+  background: #414142;
+  color: #fff;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.hamburger{
+  width: 5px;
+  height: 5px;
+  border: 0;
+  border-top: 3px solid #fff;
+  background: transparent;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 100px;
+}
+.hamburger::before, .hamburger::after {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 3px solid #fff;
+  transform: translateY(5px);
+}
+.hamburger::after {
+  transform: translateY(15px);
+}
+.hamburger:focus {
+  transform: rotate(45deg) translateY(6px);
+  border: none;
+}
+.hamburger:focus::after {
+  transform: rotate(-90deg) translateX(-5px);
 }
 
-@media(min-width: 768px) {
-  @include grid('md');
+.wraper{
+  background: #fff;
+  display: grid;
+  grid-template-rows: 30px; 
+  grid-gap: 1px;
+  grid-auto-rows: 50px 50px;
 }
-
-@media(min-width: 992px) {
-  @include grid('lg');
+.items {
+  margin: 0.5px;
+  padding-left: 20px;
+  border: 0.5px solid rgb(228, 225, 225);
+  background: #fff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
-
-@media(min-width: 1200px) {
-  @include grid('xl');
+.container{
+  padding: 0;
+  margin: 0 auto;
+}
+table {
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  td {
+	  border-bottom: 1px solid rgb(180, 180, 180);
+    padding: 0 10px;
+    font-size: 17px;
+  }
+}
+tr:hover{
+  background: rgb(228, 223, 223);
+  border: 1px solid rgb(180, 180, 180);
+}
+.button {
+  text-align: center;
+}
+.btn {
+  background: rgb(253, 171, 19);
+  border: none;
+  color: #fff;
+  padding: 16px 10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition: 0.3s;
+  &:hover {
+    background-color:rgb(158, 105, 6);
+    color: white;
+  }
+img {
+  background: url('images\icons\general.svg');
+}
 }
