@@ -1,1 +1,1 @@
-# Projekt-indywidualny-10-12
+https://github.com/aniajtp/Projekt-indywidualny-10-12.git
