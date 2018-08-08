@@ -7,32 +7,192 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam');
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
-body {background: rgb(194, 192, 192);
-margin: 0 50px;
+body {
+  background: rgb(194, 192, 192);
+  margin: 0 50px;
+  font-family: Arial,sans-serif;
 }
 .grid-container {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 80px;
-  grid-auto-rows: 50px 80px 450px 50px 450px;
+  grid-template-rows: 50px;
+  grid-auto-rows: 50px 100px 850px 50px 450px;
   grid-template-areas:
   "sidebar header"
-  "sidebar artitle_1"
+  "sidebar title"
   "sidebar date"
-  "sidebar article_1"
+  "sidebar artitle_1"
   "sidebar title_2"
   "sidebar article_2";
 }
 .item {
-  margin: 5px;
-  border: 1px solid black;
+  margin: 2px;
+  box-shadow: 1px 2px #ccc9c9;
   background: #fff;
-  margin: 1px;
 }
 .header {
   grid-area: header;
 }
+
+.title_2 {
+    grid-area: title_2
+}
+.artitle_2 {
+  grid-area: headarticle_2;
+
+}
+.navbar-right {
+  overflow: hidden;
+  font-family: Arial;
+  float: right;
+}
+.navbar-right a {
+  float: left;
+  font-size: 1.2vw;
+  border-left: 1px solid rgb(180, 176, 176);
+  border-right: 1px solid rgb(180, 176, 176);
+  color: rgb(10, 13, 172);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 1.2vw; 
+  border: none;
+  border-left: 2px solid rgb(180, 176, 176);
+  border-right: 1px solid rgb(180, 176, 176);
+  outline: none;
+  color: rgb(66, 61, 61);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  height: 100%;
+}
+.dropbtn img, .navbar-right img {
+  margin-right: 10px;
+  width: 1.2vw; 
+}
+.navbar-right a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(160, 156, 156);
+  color: #fff;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 179px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.title h2,.title_2 h2  {
+  font-family: 'Arial Narrow';
+  margin-top: 0px;
+  padding: 9px;
+  color: rgb(131, 126, 126);
+}
+/*TABELA 1*/
+.date {
+  table {
+    width: 30%;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(66, 61, 61);
+    border-collapse: collapse;
+    border: 1px solid rgb(180, 176, 176);
+    img {
+      width: 40px;
+      height: 25px;
+    }
+    td {
+      padding: 15px;
+    }
+    th {
+      background: orangered;
+    }
+  }
+}
+/*TABELA 2*/
+.overflow {
+  table {
+    width: 75%;
+    margin: 30px auto;
+    padding: 10px;
+    font-size: 1.5vw;
+    text-align: left;
+    color: rgb(66, 61, 61);
+    border-collapse: collapse;
+    td {
+      padding: 10px;
+      border-bottom: 1px solid rgb(180, 176, 176);
+    }
+    th {
+      padding:20px;
+    }
+  }
+}
+.article_1 p {
+  font-family: 'Arial Narrow';
+  font-size: 1.6vw;
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-left: 140px;
+  color: rgb(131, 126, 126);
+}
+.col-container {
+  display: box;
+  width: 45%;
+  margin: 0 auto;
+}
+.col {
+  display: inline-grid;
+  margin: 20px;
+  padding: 10px 15px;
+  font-size: 3.4vh;
+  color: rgb(131, 126, 126);
+  border-radius: 8%;
+}
+.dot, .dot1, .dot2 {
+  height: 2.5vh;
+  width: 2.5vh;
+  background-color: rgb(16, 163, 131);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+.dot1 {
+  background-color: rgb(218, 104, 11);
+}
+.dot2 {
+  background-color: rgb(7, 145, 30);
+}
+.diagram {
+text-align: center;
+  img {
+    width: 75%;
+    height:400px;
+    margin-top: 50px;
+  }
+}
+/*STYLOWANIE SIDEBARA*/
 .sidebar {
   grid-area: sidebar;
   background: #000;;
@@ -42,34 +202,41 @@ margin: 0 50px;
   overflow: hidden;
   position: relative;
   border-bottom: 2px solid rgb(56, 54, 54);
-
+  #myLinks {
+    display: none;
+    margin-top: 20px;
+    a {
+      font-size: 22px;
+      font-style: normal;
+    }
+    img {
+      width: 16px;
+      margin-right: 10px;
+    }
+  }
+  a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: none;
+    font-size: 30px;
+    display: block;
+  }
+  a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  & a:hover {
+    background-color: rgb(56, 54, 54);
+    color: #fff;
+  }
 }
-.topnav #myLinks {
-  display: none;
-  margin-top: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
-.topnav #myLinks a {
-  font-size: 20px;
-  font-style: normal;
-}
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 30px;
-  display: block;
-}
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav a:hover {
+#myLinks a:hover {
   background-color: rgb(56, 54, 54);
+  border-left:2px solid orangered;
   color: #fff;
 }
 .active {
@@ -82,6 +249,7 @@ margin: 0 50px;
     font-size: 20px;
     text-align: left;
     text-transform: uppercase;
+    font-style: normal;
     margin-left: 10px;
     padding: 10px;
   }
@@ -94,6 +262,7 @@ margin: 0 50px;
   .name {
     font-size: 18px;
     text-transform: capitalize;
+    font-style: normal;
     margin-top: 30px;
     margin-left: 10px;
   }
@@ -101,7 +270,36 @@ margin: 0 50px;
 .row {
   display: flex;
 }
-
+table {
+  width: 60%;
+  margin: 0 auto;
+  td{
+    border-bottom: 1px solid rgb(180, 180, 180);
+    padding: 0 10px;
+    font-size: 17px;
+  }
+  & td:hover{
+  background: rgb(228, 223, 223);
+  border: 1px solid  rgb(180, 180, 180);
+  }
+}
+.button {
+  text-align: center;
+}
+.btn {
+  background: rgb(253, 171, 19);
+  border: none;
+  color: #fff;
+  padding: 16px 10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition: 0.3s;
+  &.btn:hover {
+    background-color:rgb(241, 93, 7);
+    color: white;
+  }
+}
 
 
 
