@@ -11,27 +11,30 @@
   <body>
     <div class="grid-container">
       <div class="item header">
-        <div class="navbar-right">
-          <div class="dropdown">
-            <button class="dropbtn">
-              <img src="images/icons/wallet.svg"> $1,500.00
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+        <div class="navbar">
+          <div class="navbar-left"></div>
+          <div class="navbar-right">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <img src="images/icons/wallet.svg"> $1,500.00
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
             </div>
+            <a href="#alarm"><img src="images/icons/notification.svg"></a>
+            <a href="#user"><img src="images/icons/profile.svg">Leonardo Dicaprio</a>
+            <a href="#news"><img src="images/icons/quit.svg"></a>
           </div>
-          <a href="#alarm"><img src="images/icons/notification.svg"></a>
-          <a href="#user"><img src="images/icons/profile.svg">Leonardo Dicaprio</a>
-          <a href="#news"><img src="images/icons/quit.svg"></a>
         </div>
       </div>
       <!--SIDEBAR-->
       <div class="item sidebar">
         <div class="topnav">
-          <a href="#home" class="active">Just do it</a>
+          <div class="active">Just do it</div>
           <div id="myLinks">
             <a href="#general"><img src="images/icons/star.png">General</a>
             <a href="#details"><img src="images/icons/star.png">Details</a>
@@ -65,7 +68,7 @@
         <table>
           <tr>
             <td>16.05.2016</td>
-            <td>16.05.2016</td>
+            <td class="td-date">16.05.2016</td>
             <td class="td-td">
               <img src="images/icons/calendar.svg">
             </td>
@@ -198,17 +201,15 @@
     </div>
 
     <script>
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+      }  else {
+          x.style.display = "block";
         }
-        </script>
-        
-        
+      }
+    </script>
 
 
 
