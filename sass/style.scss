@@ -27,7 +27,7 @@ body {
 }
 .item {
   margin: 2px;
-  box-shadow: 1px 2px #ccc9c9;
+  box-shadow: 1px 2px #f5f5f2;
   background: #fff;
 }
 .header {
@@ -45,7 +45,7 @@ body {
   background:  #fff;
   height: 59px;
   margin-top: -2px;
-  border: 1px solid rgb(180, 176, 176);
+  border: 1px solid #979797;
 }
 .navbar-right {
   overflow: hidden;
@@ -55,8 +55,8 @@ body {
   a {
     float: left;
     font-size: 1.2vw;
-    border-left: 1px solid rgb(180, 176, 176);
-    color: rgb(10, 13, 172);
+    border-left: 1px solid #979797;
+    color: #56819f;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -65,13 +65,29 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  img {
+    position: relative;
+    z-index: 2;
+  }
 }
+.dot3{
+  height: 1.6vh;
+  width: 1.6vh;
+  background-color: #f58220;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: -18px;
+  z-index: 1;
+}
+
 .dropdown .dropbtn {
   font-size: 1.2vw; 
   border: none;
-  border-left: 2px solid rgb(180, 176, 176);
+  border-left: 2px solid #979797;
   outline: none;
-  color: rgb(66, 61, 61);
+  color: #333;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; 
@@ -79,7 +95,7 @@ body {
   height: 100%;
 }
 .dropbtn img, .navbar-right img {
-  margin-right: 10px;
+  margin-right: 5px;
   width: 1.2vw; 
 }
 .navbar-right a:hover, .dropdown:hover .dropbtn {
@@ -89,12 +105,12 @@ body {
   display: none;
   position: absolute;
   background-color: #e3e3e3;
-  min-width: 164.4px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 161px;
+  box-shadow: 0px 8px 16px 0px #333;
 }
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -116,12 +132,12 @@ body {
 .date {
   table {
     width: 40%;
-    margin: 20px auto;
+    margin: 28px auto;
     font-size: 20px;
     text-align: center;
     color: #979797;
     border-collapse: collapse;
-    border: 1px solid  rgb(180, 180, 180);
+    border: 1px solid #979797;
     border-radius: 20%;
     img {
       width: 40px;
@@ -137,11 +153,11 @@ body {
       }
     }
     th {
-      background: rgb(253, 171, 19);
+      background: #f58220;
       padding: 5px;
       border: none;
       &:hover {
-        background:rgb(241, 93, 7);
+        background: #ffa200;
       }
     }
   }
@@ -158,19 +174,18 @@ body {
     border-collapse: collapse;
     td {
       padding: 10px;
-      border-bottom: 1px solid rgb(180, 176, 176);
+      border-bottom: 1px solid #979797;
     }
     th {
       padding:20px;
-      background: #fff;
     }
   }
 }
 .article_1 p {
   font-family: 'Arial Narrow';
   font-size: 1.6vw;
-  margin-top: 40px;
-  padding-top: 30px;
+  margin-top: 30px;
+  padding-top: 25px;
   padding-left: 140px;
   color: #979797;
 }
@@ -199,7 +214,7 @@ body {
 .dot, .dot1, .dot2 {
   height: 2.5vh;
   width: 2.5vh;
-  background-color: rgb(16, 163, 131);
+  background-color: #74b67a;
   border-radius: 50%;
   display: inline-block;
   margin-right: 10px;
@@ -208,24 +223,24 @@ body {
   }
 }
 .dot1 {
-  background-color: rgb(218, 104, 11);
+  background-color: #f58220;
 }
 .dot2 {
-  background-color: rgb(7, 145, 30);
+  background-color: #04ae00;
 }
 .diagram {
 text-align: center;
   img {
-    width: 75%;
-    height:400px;
-    margin-top: 50px;
+    width: 80%;
+    height: 450px;
+    margin-top: 20px;
   }
 }
 /*STYLOWANIE SIDEBARA*/
 .sidebar {
   grid-area: sidebar;
   background: #333333;
-  color: #fff;
+  color: #f5f5f2;
 }
 .topnav {
   position: fixed;
@@ -242,7 +257,7 @@ text-align: center;
     margin-top: 0;
   & a:hover {
       background-color: #979797;
-      border-left:2px solid orangered;
+      border-left:2px solid #ffa200;
       color: #f5f5f2;
   }
     a {
@@ -277,6 +292,15 @@ text-align: center;
 .sidebar-gallery {
   position: fixed;
   margin-top: 480px;
+  .dot3 {
+    height: 2vh;
+    width: 2vh;
+    background-color:#04ae00;
+    border-radius: 50%;
+    display: inline-block;
+    top: -60px;
+    left: -20px;
+  }
   .title{
     font-size: 20px;
     text-align: left;
@@ -296,7 +320,7 @@ text-align: center;
     text-transform: capitalize;
     font-style: normal;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 }
 .row {
@@ -308,7 +332,7 @@ text-align: center;
     width: 80%;
     margin: 0 auto;
     td {
-      border-bottom: 1px solid rgb(180, 180, 180);
+      border-bottom: 1px solid #979797;
       padding: 5px;
       font-size: 17px;
       &:hover {
@@ -321,7 +345,7 @@ text-align: center;
     margin: 50px 0;
   }
   .btn {
-    background: rgb(253, 171, 19);
+    background: #f58220;
     border: none;
     color: #f5f5f2;
     padding: 16px 10px;
@@ -330,7 +354,7 @@ text-align: center;
     margin: 10px 2px;
     transition: 0.3s;
     &:hover {
-      background-color:rgb(241, 93, 7);
+      background-color: #ffa200;
       color: #f5f5f2;
     }
   }
