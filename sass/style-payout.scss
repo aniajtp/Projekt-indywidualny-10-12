@@ -1,3 +1,12 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "sidebar";
+
+
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
 body {
   background: #979797;
   margin: 0 50px;
@@ -5,8 +14,9 @@ body {
 }
 .grid-container {
   display: grid;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 60px;
-  grid-auto-rows: 50px 100px 800px;
+  grid-auto-rows: 50px 100px 725px;
   grid-template-areas:
   "sidebar header"
   "sidebar title"
@@ -30,7 +40,7 @@ body {
   background:  #fff;
   height: 59px;
   margin-top: -2px;
-  border: 1px solid rgb(180, 176, 176);
+  border: 1px solid #979797;
 }
 .navbar-right {
   overflow: hidden;
@@ -40,8 +50,8 @@ body {
   a {
     float: left;
     font-size: 1.2vw;
-    border-left: 1px solid rgb(180, 176, 176);
-    color: rgb(10, 13, 172);
+    border-left: 1px solid #979797;
+    color: #56819f;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -50,13 +60,28 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  img {
+    position: relative;
+    z-index: 2;
+  }
+}
+.dot3{
+  height: 1.6vh;
+  width: 1.6vh;
+  background-color: #f58220;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: -18px;
+  z-index: 1;
 }
 .dropdown .dropbtn {
   font-size: 1.2vw; 
   border: none;
-  border-left: 2px solid rgb(180, 176, 176);
+  border-left: 2px solid #979797;
   outline: none;
-  color: rgb(66, 61, 61);
+  color: #333;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; 
@@ -64,7 +89,7 @@ body {
   height: 100%;
 }
 .dropbtn img, .navbar-right img {
-  margin-right: 10px;
+  margin-right: 5px;
   width: 1.2vw; 
 }
 .navbar-right a:hover, .dropdown:hover .dropbtn {
@@ -75,11 +100,11 @@ body {
   position: absolute;
   background-color: #e3e3e3;
   min-width: 164.4px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px #333;
 }
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -101,12 +126,12 @@ body {
 .date {
   table {
     width: 40%;
-    margin: 20px auto;
+    margin: 28px auto;
     font-size: 20px;
     text-align: center;
     color: #979797;
     border-collapse: collapse;
-    border: 1px solid  rgb(180, 180, 180);
+    border: 1px solid #979797;
     border-radius: 20%;
     img {
       width: 40px;
@@ -122,11 +147,11 @@ body {
       }
     }
     th {
-      background: rgb(253, 171, 19);
+      background: #f58220;
       padding: 5px;
       border: none;
       &:hover {
-        background:rgb(241, 93, 7);
+        background: #ffa200;
       }
     }
   }
@@ -139,7 +164,7 @@ body {
 .topnav {
   position: fixed;
   margin-left: 0;
-  border-bottom: 2px solid rgb(56, 54, 54);
+  border-bottom: 2px solid #979797;
   .active {
     color: #f5f5f2;
     font-family: Kalam;
@@ -151,7 +176,7 @@ body {
     margin-top: 0;
   & a:hover {
       background-color: #979797;
-      border-left:2px solid orangered;
+      border-left:2px solid #ffa200;
       color: #f5f5f2;
   }
     a {
@@ -186,7 +211,16 @@ body {
 .sidebar-gallery {
   position: fixed;
   margin-top: 480px;
-  .title{
+  .dot3 {
+    height: 2vh;
+    width: 2vh;
+    background-color:#04ae00;
+    border-radius: 50%;
+    display: inline-block;
+    top: -60px;
+    left: -20px;
+  }
+  .title {
     font-size: 20px;
     text-align: left;
     text-transform: uppercase;
@@ -213,50 +247,53 @@ body {
 }
 .article {
   color: #333;
-  padding:50px 20px;
+  padding:70px 20px;
   table {
     width: 100%;
     border-collapse: collapse;
     tr {
       padding: 30px;
-      &:hover {
-        background: #e3e3e3;
-      }
+      border-bottom: 1px solid #979797;
     }
     th {
       font-size: 22px;
       text-align: left;
       padding: 5px;
       padding-bottom: 20px;
+      select {
+        border: none;
+        width: 20px;
+        font-size: 15px;
+        cursor: pointer;
+      }
     }
     td {
-      border-bottom: 1px solid rgb(180, 180, 180);
-      height: 30px; 
+      height: 50px;
+      &:hover {
+        background: #e3e3e3;
+      }
     }
   }
-} 
+}
 .pagination {
-  margin: 30px auto;
-  border: 2px solid hotpink;
-
+  width: 50%;
+  margin: 50px auto;
 }
 .pagination a {
-  color: black;
+  color: #56819f;
   padding: 8px 16px;
-  margin: 20px auto;
+  margin: 30px auto;
   text-decoration: none;
   transition: background-color .3s;
 }
 .pagination a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #e3e3e3;
+  color: #979797;
 }
 .pagination a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #e3e3e3;
+  color: #979797;
 }
-
-
-
 
 
 @media screen and (max-width: 700px) {

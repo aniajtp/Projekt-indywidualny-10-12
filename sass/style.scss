@@ -301,7 +301,7 @@ text-align: center;
     top: -60px;
     left: -20px;
   }
-  .title{
+  .title {
     font-size: 20px;
     text-align: left;
     text-transform: uppercase;
@@ -320,7 +320,7 @@ text-align: center;
     text-transform: capitalize;
     font-style: normal;
     margin-top: 30px;
-    margin-left: 0;
+    margin-left: 10px
   }
 }
 .row {
@@ -328,6 +328,7 @@ text-align: center;
 }
 .article_2 {
   color: #333;
+  border-collapse: collapse;
   table {
     width: 80%;
     margin: 0 auto;

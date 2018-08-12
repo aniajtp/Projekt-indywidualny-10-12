@@ -17,7 +17,7 @@
             <div class="dropdown">
               <button class="dropbtn">
                 <img src="images/icons/wallet.svg"> $1,500.00
-                <i class="fa fa-caret-down"></i>
+                <img src="images/icons/arrow-down-small.svg">
               </button>
               <div class="dropdown-content">
                 <a href="#">Link 1</a>
@@ -25,7 +25,10 @@
                 <a href="#">Link 3</a>
               </div>
             </div>
-            <a href="#alarm"><img src="images/icons/notification.svg"></a>
+            <a href="#alarm"><img src="images/icons/notification.svg">
+              <span class="dot3"></span>
+
+            </a>
             <a href="#user"><img src="images/icons/profile.svg">Leonardo Dicaprio</a>
             <a href="#news"><img src="images/icons/quit.svg"></a>
           </div>
@@ -57,7 +60,9 @@
             <section class="title">your manager</section>
           </div>
           <div class="row">
-            <section class="col-6"><img src="http://cdn.pixabay.com/photo/2017/06/03/04/45/man-2367952_960_720.jpg"></section>
+            <section class="col-6"><img src="http://cdn.pixabay.com/photo/2017/06/03/04/45/man-2367952_960_720.jpg">
+              <span class="dot3"></span>
+            </section>
             <section class="status col-2"></section>
             <section class="name col-4">Mikhael E.</section>
           </div>
@@ -87,18 +92,17 @@
           <tbody>
             <tr>
               <th>Date
-                <label for="data"></label>
-                <select id="data">
-                  <option value=""></option>
-                  <option value="m">17/08/02</option>
-                  <option value="l">15/08/02</option>
-                  <option value="y">17/08/02</option>
-                  <option value="z">15/08/02</option>
-                  <option value="p">17/08/02</option>
-                  <option value="d">15/08/02</option>
-                  <option value="wallet">17/08/02</option>
-                  <option value="r">15/08/02</option>
-                </select> 
+                <select>
+                  <option value="0"></option>
+                  <option value="1">17/08/02</option>
+                  <option value="2">15/08/02</option>
+                  <option value="3">17/08/02</option>
+                  <option value="4">15/08/02</option>
+                  <option value="5">17/08/02</option>
+                  <option value="6">15/08/02</option>
+                  <option value="7">17/08/02</option>
+                  <option value="8">15/08/02</option>
+                </select>
               </th>
               <th>Amount ($)</th>
               <th>Deal</th>
@@ -155,9 +159,9 @@
           </tbody>
         </table>
         <div class="pagination">
-          <a href="#">&laquo;</a>
-          <a href="#">1</a>
-          <a class="active" href="#">2</a>
+          <a href="#">&lt;</a>
+          <a class="active" href="#">1</a>
+          <a href="#">2</a>
           <a href="#">3</a>
           <a href="#">4</a>
           <a href="#">5</a>
@@ -165,7 +169,7 @@
           <a href="#">7</a>
           <a href="#">8</a>
           <a href="#">9</a>
-          <a href="#">&raquo;</a>
+          <a href="#">&gt;</a>
         </div>
       </div>
     </div>
