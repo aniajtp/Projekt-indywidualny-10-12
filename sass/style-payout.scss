@@ -155,7 +155,7 @@ body {
 .sidebar {
   grid-area: sidebar;
   background: #333333;
-  color: #fff;
+  color: #f5f5f2;
 }
 .topnav {
   position: fixed;
@@ -164,7 +164,7 @@ body {
   .active {
     color: #f5f5f2;
     font-family: Kalam;
-    padding: 16px 16px;
+    padding: 16px;
     font-size: 30px;
   }
   #hamburger {
@@ -237,9 +237,6 @@ body {
     margin-top: 30px;
     margin-left: 10px;
   }
-}
-.row {
-  display: flex;
 }
 .article {
   color: #333;
