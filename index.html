@@ -38,20 +38,18 @@
           <div class="active">
             <a href="#">
               Just do it
+              <a href="javascript:void(0);" class="fa fa-bars" onclick="myFunction()"></a>
             </a>
           </div>
-          <div id="myLinks">
+          <div id="hamburger">
             <a href="#general"><img src="images/icons/star.png">General</a>
             <a href="#details"><img src="images/icons/star.png">Details</a>
             <a href="#links"><img src="images/icons/star.png">Links</a>
             <a href="#banners"><img src="images/icons/star.png">Banners</a>
             <a href="#personal data"><img src="images/icons/star.png">Personal data</a>
-            <a href="index-payout.html"><img src="images/icons/star.png">Payout</a>
+            <a href="#payout"><img src="images/icons/star.png">Payout</a>
             <a href="#postback"><img src="images/icons/star.png">Postback</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
         </div>
         <div class="sidebar-gallery">
           <div class="row">
@@ -211,7 +209,7 @@
 
     <script>
       function myFunction() {
-        var x = document.getElementById("myLinks");
+        var x = document.getElementById("hamburger");
         if (x.style.display === "block") {
         x.style.display = "none";
       }  else {

@@ -11,6 +11,7 @@ body {
   background: #979797;
   margin: 0 50px;
   font-family: Arial,sans-serif;
+  background: #979797;
 }
 .grid-container {
   display: grid;
@@ -26,7 +27,7 @@ body {
   "sidebar article_2";
 }
 .item {
-  margin: 3px 10px;
+  margin: 0 10px 4px 10px;
   box-shadow: 1px 2px #f5f5f2;
   background: #fff;
 }
@@ -43,16 +44,12 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-.navbar {
-  height: 55px;
-  background: darkviolet;
-}
 .navbar-right {
   position: fixed;
   font-family: Arial;
-  padding-top: 2px;
-  background:  rgb(206, 20, 20);
+  padding-top: 5px;
+  background: #fff;
+  border: 1px solid #979797;
   a {
     float: left;
     font-size: 1.2vw;
@@ -86,10 +83,9 @@ body {
 .dropdown .dropbtn {
   font-size: 1.2vw; 
   border: none;
-  border-left: 2px solid #979797;
   outline: none;
   color: #333;
-  padding: 14px 16px;
+  padding: 14px 12px;
   background-color: inherit;
   font-family: inherit; 
   margin: 0; 
@@ -248,18 +244,18 @@ text-align: center;
   margin-left: 0;
   border-bottom: 2px solid rgb(56, 54, 54);
   .active {
+    display: inline-block;
     color: #f5f5f2;
     font-family: Kalam;
-    padding: 16px 16px;
-    font-size: 30px;
+    padding-top: 10px;
+    font-size: 25px;
   }
-  #myLinks {
-    width: 233px;
+  #hamburger {
     margin-top: 0;
   & a:hover {
-      background-color: #979797;
-      border-left:2px solid #ffa200;
-      color: #f5f5f2;
+    background-color: #979797;
+    border-left:2px solid #ffa200;
+     color: #f5f5f2;
   }
     a {
       font-size: 22px;
@@ -277,12 +273,10 @@ text-align: center;
     font-style: none;
     font-size: 30px;
     display: block;
-  }
-  a.icon {
-    background: #333333;
-    position: fixed;
-    left: 220px;
-    top: 18px;
+    .fa fa-bars {
+      left: 0px;
+      top: 50px;
+    }
   }
   & a:hover {
     background-color: #979797;
@@ -324,12 +318,13 @@ text-align: center;
     margin-left: 10px
   }
 }
+/*TABELA 3*/
 .article_2 {
   color: #333;
   border-collapse: collapse;
   table {
-    width: 80%;
-    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0 40px;
     td {
       border-bottom: 1px solid #979797;
       padding: 5px;
@@ -366,22 +361,6 @@ text-align: center;
 .scroll-wrapper table {
   width: 100%;
   max-width: 100%;
-}
-
-@media(max-width: 767px) {
-  @include grid('sm');
-}
-
-@media(min-width: 768px) {
-  @include grid('md');
-}
-
-@media(min-width: 992px) {
-  @include grid('lg');
-}
-
-@media(min-width: 1200px) {
-  @include grid('xl');
 }
 
 
