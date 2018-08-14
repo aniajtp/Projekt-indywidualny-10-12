@@ -11,7 +11,6 @@ body {
   background: #979797;
   margin: 0 50px;
   font-family: Arial,sans-serif;
-  background: #979797;
 }
 .grid-container {
   display: grid;
@@ -27,7 +26,7 @@ body {
   "sidebar article_2";
 }
 .item {
-  margin: 0 10px 4px 10px;
+  margin: 2px;
   box-shadow: 1px 2px #f5f5f2;
   background: #fff;
 }
@@ -242,15 +241,15 @@ text-align: center;
 .topnav {
   position: fixed;
   margin-left: 0;
-  border-bottom: 2px solid rgb(56, 54, 54);
+  border-bottom: 2px solid #979797;
   .active {
-    display: inline-block;
     color: #f5f5f2;
     font-family: Kalam;
-    padding-top: 10px;
-    font-size: 25px;
+    padding-top: 16px;
+    font-size: 30px;
   }
   #hamburger {
+    width: 233px;
     margin-top: 0;
   & a:hover {
     background-color: #979797;
@@ -273,10 +272,12 @@ text-align: center;
     font-style: none;
     font-size: 30px;
     display: block;
-    .fa fa-bars {
-      left: 0px;
-      top: 50px;
-    }
+  }
+  a.icon {
+    background: #333333;
+    position: fixed;
+    left: 220px;
+    top: 18px;
   }
   & a:hover {
     background-color: #979797;
@@ -361,6 +362,21 @@ text-align: center;
 .scroll-wrapper table {
   width: 100%;
   max-width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 
 
