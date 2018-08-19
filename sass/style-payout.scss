@@ -9,7 +9,6 @@
 
 body {
   background: #979797;
-  margin: 0 50px;
   font-family: Arial,sans-serif;
 }
 .grid-container {
@@ -24,12 +23,13 @@ body {
   "sidebar article";
 }
 .item {
-  margin: 2px;
-  box-shadow: 1px 2px #ccc9c9;
+  margin-bottom: 3px;
+  box-shadow: 1px 2px #f5f5f2;
   background: #fff;
 }
 .header {
   grid-area: header;
+  float: right;
 }
 .artitle_2 {
   grid-area: headarticle_2;
@@ -39,8 +39,10 @@ body {
   flex-wrap: wrap;
 }
 .navbar-right {
+  height: 52px;
   position: fixed;
   font-family: Arial;
+  margin-left: 776px;
   padding-top: 5px;
   background: #fff;
   border: 1px solid #979797;
@@ -78,7 +80,7 @@ body {
   border: none;
   outline: none;
   color: #333;
-  padding: 14px 12px;
+  padding: 10px 12px;
   background-color: inherit;
   font-family: inherit; 
   margin: 0; 
@@ -164,16 +166,16 @@ body {
   .active {
     color: #f5f5f2;
     font-family: Kalam;
-    padding: 16px;
+    padding-top: 16px;
     font-size: 30px;
   }
   #hamburger {
-    width: 233px;
+    width: 200px;
     margin-top: 0;
   & a:hover {
-      background-color: #979797;
-      border-left:2px solid #ffa200;
-      color: #f5f5f2;
+    background-color: #979797;
+    border-left:2px solid #ffa200;
+    color: #f5f5f2;
   }
     a {
       font-size: 22px;
@@ -181,7 +183,7 @@ body {
     }
     img {
       width: 16px;
-      margin-right: 10px;
+      margin-right: 5px;
     }
   }
   a {
@@ -195,8 +197,8 @@ body {
   a.icon {
     background: #333333;
     position: fixed;
-    left: 220px;
-    top: 18px;
+    left: 195px;
+    top: 16px;
   }
   & a:hover {
     background-color: #979797;
