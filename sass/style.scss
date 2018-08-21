@@ -11,11 +11,15 @@ body {
   background: #979797;
   font-family: Arial,sans-serif;
 }
+.container{
+  margin:0.52px 25px;
+  padding: 0 20px;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 60px;
-  grid-auto-rows: 50px 100px 850px 50px 900px;
+  grid-auto-rows: 50px 100px 850px 50px 880px;
   grid-template-areas:
   "sidebar header"
   "sidebar title"
@@ -26,12 +30,12 @@ body {
 }
 .item {
   margin-bottom: 3px;
+  margin-left: 4px;
   box-shadow: 1px 2px #f5f5f2;
   background: #fff;
 }
 .header {
   grid-area: header;
-  float: right;
 }
 .title_2 {
   grid-area: title_2
@@ -45,13 +49,15 @@ body {
 }
 .navbar-right {
   height: 57px;
-  position: fixed;
   display: grid;
+  grid-gap: 20px;
   grid-auto-flow:column;
-  right: 0; 
+  grid-column-gap: 30px;
+  justify-content: space-evenly;
+  align-content: center;
   font-family: Arial;
-  background: #fff;
   border: 1px solid #979797;
+  background: #fff;
   a {
     float: left;
     font-size: 1.2vw;
@@ -69,18 +75,6 @@ body {
     z-index: 2;
   }
 }
-.dot3{
-  height: 1.6vh;
-  width: 1.6vh;
-  background-color: #f58220;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  top: -10px;
-  left: -18px;
-  z-index: 1;
-}
-
 .dropdown .dropbtn {
   font-size: 1.2vw; 
   border: none;
@@ -94,10 +88,11 @@ body {
 }
 .dropbtn img, .navbar-right img {
   margin-right: 5px;
-  width: 1.2vw; 
+  width: 1.3vw; 
 }
 .navbar-right a:hover, .dropdown:hover .dropbtn {
   background-color: #e3e3e3;
+  display: block;
 }
 .dropdown-content {
   display: none;
@@ -109,7 +104,7 @@ body {
 .dropdown-content a {
   float: none;
   color: #333;
-  padding: 12px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -119,6 +114,17 @@ body {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.dot3{
+  height: 1.6vh;
+  width: 1.6vh;
+  background-color: #f58220;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  left: -20px;
+  z-index: 1;
 }
 .title h2,.title_2 h2  {
   font-family: 'Arial Narrow';
@@ -188,7 +194,7 @@ body {
   color: #979797;
 }
 .col-container {
-  display: box;
+  display: flex;
   width: 45%;
   margin: 0 auto;
 }
@@ -250,6 +256,10 @@ text-align: center;
     font-family: Kalam;
     padding-top: 16px;
     font-size: 30px;
+    p {
+      margin-left: 30px;
+      margin-top: 16px;
+    }
   }
   #hamburger {
     width: 200px;
@@ -265,7 +275,7 @@ text-align: center;
     }
     img {
       width: 16px;
-      margin-right: 5px;
+      margin-right: 6px;
     }
   }
   a {
@@ -278,9 +288,9 @@ text-align: center;
   }
   a.icon {
     background: #333333;
-    position: fixed;
+    position: absolute;
     left: 195px;
-    top: 16px;
+    top: 20px;
   }
   & a:hover {
     background-color: #979797;

@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+  <div class='container'>
     <div class="grid-container">
       <div class="item header">
         <div class= "navbar">
-          <div class="navbar-left"></div>
           <div class="navbar-right">
             <div class="dropdown">
               <button class="dropbtn">
@@ -38,8 +38,9 @@
       <div class="item sidebar">
         <div class="topnav">
           <div class="active">
-            <a href="#">
-              Just do it
+            <p>Just do it</p>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class><img src="images/icons/menu-button.png" alt="hamburger"></i>
             </a>
           </div>
           <div id="hamburger">
@@ -51,10 +52,6 @@
             <a href="index-payout.html"><img src="images/icons/star.png" alt="star">Payout</a>
             <a href="#postback"><img src="images/icons/star.png" alt="star">Postback</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-          </a>
-
         </div>
         <div class="sidebar-gallery">
           <div class="row">
@@ -211,6 +208,7 @@
         </div>
       </div>
     </div>
+  </div>  
 
     <script>
       function myFunction() {

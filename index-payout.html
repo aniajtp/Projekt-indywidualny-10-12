@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-payout.css">
   </head>
   <body>
+  <div class="container">
     <div class="grid-container">
       <div class="item header">
         <div class="navbar">
@@ -37,8 +38,9 @@
       <div class="item sidebar">
         <div class="topnav">
           <div class="active">
-            <a href="index.html">
-              Just do it
+            <p><a href="index.html">Just do it</a></p>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class><img src="images/icons/menu-button.png" alt="hamburger"></i>
             </a>
           </div>
           <div id="hamburger">
@@ -50,9 +52,6 @@
             <a href="#payout"><img src="images/icons/star.png" alt="star">Payout</a>
             <a href="#postback"><img src="images/icons/star.png" alt="star">Postback</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
         </div>
         <div class="sidebar-gallery">
           <div class="row">
@@ -174,6 +173,7 @@
         </div>
       </div>
     </div>
+  </div>
     <script>
       function myFunction() {
         var x = document.getElementById("hamburger");
