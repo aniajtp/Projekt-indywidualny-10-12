@@ -35,20 +35,34 @@
       <div class="item sidebar">
         <div class="topnav">
           <div class="active">
-            <p>Just do it</p>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            Just do it
+            <a href="javascript:void(0)" class="icon" onclick="myFunction()">
               <i class><img src="images/icons/menu-button.png" alt="hamburger"></i>
             </a>
           </div>
-          <div id="hamburger">
-            <a href="#general"><img src="images/icons/star.png" alt="star">General</a>
-            <a href="#details"><img src="images/icons/star.png" alt="star" >Details</a>
-            <a href="#links"><img src="images/icons/star.png" alt="star">Links</a>
-            <a href="#banners"><img src="images/icons/star.png" alt="star">Banners</a>
-            <a href="#personal-data"><img src="images/icons/star.png" alt="star">Personal data</a>
-            <a href="index-payout.html"><img src="images/icons/star.png" alt="star">Payout</a>
-            <a href="#postback"><img src="images/icons/star.png" alt="star">Postback</a>
-          </div>
+          <ul class="sidebar_nav_list">
+            <li>
+              <a href="#general"><img src="images/icons/star.png" alt="star">General</a>
+            </li>
+            <li>
+              <a href="#details"><img src="images/icons/star.png" alt="star" >Details</a>
+            </li>
+            <li>
+              <a href="#links"><img src="images/icons/star.png" alt="star">Links</a>
+            </li>
+            <li>
+              <a href="#banners"><img src="images/icons/star.png" alt="star">Banners</a>
+            </li>
+            <li>
+              <a href="#personal-data"><img src="images/icons/star.png" alt="star">Personal data</a>
+            </li>
+            <li>
+              <a href="index-payout.html"><img src="images/icons/star.png" alt="star">Payout</a>
+            </li>
+            <li>
+              <a href="#postback"><img src="images/icons/star.png" alt="star">Postback</a>
+            </li>
+          </ul>
         </div>
         <div class="sidebar-gallery">
           <div class="row">
@@ -64,20 +78,26 @@
         </div>
       </div>
       <!--TITLE-->
-      <div class="item title">
-        <h2>GENERAL STATISTIC</h2>
-      </div>
-      <!--DATE-->
-      <div class="item date">
-        <table>
-          <tr>
-            <td>16.05.2016</td>
-            <td class="td-date">16.05.2016</td>
-            <td class="td-td">
+      <div class="item wrapper">
+        <div class="card-general">
+          <div class="card-header">
+            <h1 class="title-header">GENERAL STATISTIC</h1>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="tabl-container">
+            <form id="date">
+              <div class="date-first">
+              <input type="date" name="first-start" value="">
+              <div class="line"></div>
+              <input type="date" name="first-end">
               <img src="images/icons/calendar.svg" alt="callendar">
-            </td>
-            <th>
-              <img src="images/icons/refresh.svg" alt="refresh">
+            </form>
+            <button class="btn orange icon-btn" type="submit"> 
+              <i class="icon-refresh">
+                <img src="images/icons/refresh.svg" alt="refresh">
+              </i>
+            </button>
             </th>
           </tr>
         </table>
@@ -130,7 +150,7 @@
       <div class="item title_2">
         <h2>LINKS</h2>
       </div>
-      <div class="item article_2">
+      <div class="item article">
         <div class="button">
           <button type="submit" class="btn btn-primary">+ add new</button>
         </div>
