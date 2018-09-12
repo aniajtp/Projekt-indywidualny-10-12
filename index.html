@@ -10,7 +10,7 @@
   <body>
   <div class="container">
     <div class="grid-container">
-      <div class="item header">
+      <div class="header">
         <div class="navbar-right">
           <div class="dropdown">
             <button class="dropbtn">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <!--SIDEBAR-->
-      <div class="item sidebar">
+      <div class="sidebar">
         <div class="topnav">
           <div class="active">
             <p><a href="#home">Just do it</a></p>
@@ -63,46 +63,49 @@
           </div>
         </div>
       </div>
-      <!--TITLE-->
-      <div class="item title">
-        <h2>GENERAL STATISTIC</h2>
-      </div>
-      <!--DATE-->
-      <div class="item date">
-        <table>
-          <tr>
-            <td>16.05.2016</td>
-            <td>16.05.2016</td>
-            <td>
-              <img src="images/icons/calendar.svg">
-            </td>
-            <th>
-              <img src="images/icons/refresh.svg"></button>
-            </th>
-          </tr>
-        </table>
-      </div><!--DATE-->
+        
       <!--ARTICLE-->
-      <div class="item article_1">
-        <div class="overflow">
-          <table>
-            <tr>
-              <td>Visit Signups</td>
-              <td><strong>124</strong></td>
-              <th></th>
-              <td>Net Deposit</td>
-              <td><strong>564</strong></td>
-            </tr>
-            <tr>
-              <td>FTD</td>
-              <td><strong>445</strong></td>
-              <th></th>
-              <td>Turn Ower</td>
-              <td><strong>432</strong></td>
-            </tr>
-          </table>
+      <div class="item article">
+        <div class="title_main">
+          <h2>GENERAL STATISTIC</h2>
         </div>
-        <p>Earnings chart</p>
+        <div class="card-content">
+          <div class="u-container-700">
+            <form id="period-picker" class="u-center"> 
+              <div class="date-period"> 
+                <input type="date" name="period-start">
+                <div class="v-line"></div>
+                <input type="date" name="period-end">
+                  <img src="images/icons/calendar.svg"></>
+                </input>
+              </div> 
+              <button class="btn orange icon-btn" type="submit"> 
+                <img src="images/icons/refresh.svg"></> 
+              </button> 
+            </form>
+          </div>
+        </div>
+        <div class="counters">
+          <div class="counter">
+            <span class="counter-label">Visit signups</span>
+            <span class="counter-value">124</span>
+          </div>
+          <div class="counter">
+            <span class="counter-label">Net deposit</span>
+            <span class="counter-value">564</span>
+          </div>
+          <div class="counter">
+            <span class="counter-label">FTD</span>
+            <span class="counter-value">445</span>
+          </div>
+          <div class="counter">
+            <span class="counter-label">Turn over</span>
+            <span class="counter-value">432</span>
+          </div>
+        </div>
+        <div class="chart">
+          <h2>Earnings chart</h2>
+        </div>
         <div class="col-container">
           <div class="col" style="background:rgb(236, 232, 232)">
             <div class="row">
